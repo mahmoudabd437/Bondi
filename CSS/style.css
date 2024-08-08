@@ -1,0 +1,260 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #C7001E;
+    --yellow-color: #FFDB66;
+    --secund-yello: #ffc400;
+    --section-color: #eff7fa;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 20px;
+
+}
+
+.main-btn:hover {
+    color: var(--yellow-color);
+}
+
+/* start navbar */
+
+.navbar {
+    background-color: var(--dark-color);
+}
+
+.navbar .nav-item .active {
+    color: var(--green-color);
+}
+
+.navbar .nav-item a:is(:active, :hover, :focus) {
+    color: var(--green-color) !important;
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+    color: var(--green-color);
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+button[aria-expanded="true"] {
+    border-color: var(--green-color);
+    box-shadow: none !important;
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+/* end navbar */
+
+/* start landing */
+.landing {
+    background-color: var(--dark-color);
+    height: calc(100vh - 72px);
+}
+
+.landing .container {
+    flex-direction: column;
+}
+
+/* end landing */
+
+.main-heading::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+}
+
+.icon-holder {
+    height: 200px;
+}
+
+.icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-holder svg:first-of-type {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+
+.icon-holder svg:last-of-type {
+    font-size: 64px;
+    color: var(--green-color);
+}
+
+/* start features  */
+.features h4 {
+    color: var(--yellow-color);
+}
+
+/* end features  */
+/* start  work  */
+.our-work {
+    background-color: var(--section-color);
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+.our-work ul li {
+    padding: .5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.our-work ul li:not(:first-of-type):hover {
+    color: var(--red-color);
+}
+
+.our-work .box {
+    overflow: hidden;
+    padding: 5px;
+}
+
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgb(51 209 204 / 76%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+
+/* end  work  */
+
+/* start stuff */
+.description {
+    max-width: 500px;
+}
+
+/* end stuff */
+
+/* start team  */
+.team {
+    background-color: var(--section-color);
+}
+
+.team h2 {
+    color: var(--yellow-color);
+}
+
+.team .box h4 {
+    background-color: var(--green-color);
+}
+
+/* end team  */
+
+/* start project */
+.project {
+    background-color: var(--dark-color);
+}
+
+/* end project */
+
+/* start subscribe */
+.subscribe {
+    background-color: var(--secund-yello);
+}
+
+.subscribe input {
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subscribe input:focus {
+    outline: none;
+}
+
+.subscribe input::placeholder {
+    color: white;
+}
+
+.subscribe button {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+    border-radius: 20px;
+}
+
+.subscribe button:hover {
+    color: var(--yellow-color);
+}
+
+/* end subscribe */
+
+/* start footer  */
+.footer {
+    background-color: var(--dark-color);
+}
+
+.copyright>span {
+    color: var(--green-color);
+    font-weight: 500;
+}
+
+.copyright div span {
+    color: var(--yellow-color);
+    font-weight: 500;
+}
+
+.facebook {
+    background-color: #1877f2;
+    color: white;
+}
+
+.youtube {
+    background-color: #c4302b;
+    color: white;
+}
+
+.twitter {
+    background-color: #00acee;
+    color: white;
+}
+
+.linkedin {
+    background-color: #0e76a8;
+    color: white;
+}
+
+.footer svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* end footer  */
